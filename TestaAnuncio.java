@@ -30,28 +30,18 @@ public class TestaAnuncio {
             int menu = scanner.nextInt();
 
             if(menu == 1){
-                if(repositorio.cadastrarAnuncio(leDados(scanner))){
-                    System.out.println("Anúncio Cadastrado com Sucesso! ");
-                }else {
-                    System.out.println("Não foi possível cadastrar.");
-                }
+                repositorio.cadastrarAnuncio(leDados(scanner));
+                System.out.println("Anúncio Cadastrado com Sucesso! ");
+
             }else if(menu == 2){
                 pesquisar(repositorio.pesquisarAnuncio());
             }else if(menu == 0){
                 flagSair = true;
+                System.out.println("Sistema Encerrado!");
             }
 
 
         }
-
-
-
-
-
-
-
-
-
 
 
     }
