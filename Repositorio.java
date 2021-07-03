@@ -4,21 +4,13 @@ public class Repositorio {
 
     ArrayList<Anuncio> bancoDeAnuncios = new ArrayList<>();
 
-    public boolean cadastrarAnuncio(Anuncio anuncio) {
-
-        try {
-
-            return true;
-        } catch (Exception ex) {
-            return false;
-        }
-
+    public void cadastrarAnuncio(Anuncio anuncio) {
+        bancoDeAnuncios.add(anuncio);
     }
 
     public ArrayList<Anuncio> pesquisarAnuncio() {
 
         return this.bancoDeAnuncios;
-
 
     }
 
